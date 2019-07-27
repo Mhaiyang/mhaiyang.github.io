@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ICCV2019_MirrorNet</title>
+<title>TMM2018_DRFN</title>
 
 <style media="screen" type="text/css">
 body
@@ -33,24 +33,23 @@ body {
 
 <table align="center">
 <td align="center">
-<h1>Where is My Mirror?</h1>
+<h2>TMM2018</h2>
+<h1>DRFN: Deep Recurrent Fusion Network for Single Image <br> Super-Resolution with Large Factors</h1>
 </td>
 </table>
 
 <br>
 <br>
-<table align="center">
+<table align="center" cellpadding="0" cellspacing="0">
 <tr>
-	<td align="center"><img border=0 height=300 width=720 src="teaser_top.jpg"></td>
-</tr>
-<tr>
-	<td align="center"><img border=0 height=300 width=720 src="teaser_bottom.jpg"></td>
+	<td><img border=0 height=400 width=500 src="xiaoguo.jpg"></td>
+	<td><div style="margin-left:-400px;"><img border=0 height=300 width=500 src="parameter.jpg"></div></td>
 </tr>
 <tr>
 	<td align="center"> <br><br> </td>
 </tr>
 <tr>
-	<td align="center"><img border=0 height=270 width=960 src="pipeline.jpg"></td>
+	<td align="center"><img border=0 height=350 width=960 src="pipeline.jpg"></td>
 </tr>
 </table>
 
@@ -58,7 +57,7 @@ body {
 <br>
 <h2><p><font size="6"><b>Abstract</b></font></p></h2>
 <hr/>
-<p><font size="5" face="Palatino Linotype">Mirrors are everywhere in our daily lives. Existing computer vision systems do not consider mirrors, and hence may get confused by the reflected content inside a mirror, resulting in a severe performance degradation. However, separating the real content outside a mirror from the reflected content inside it is non-trivial.  The key challenge lies in that mirrors typically reflect contents similar to their surroundings, making it very difficult to differentiate the two. In this paper, we present a novel method to accurately segment mirrors from an input image. To the best of our knowledge, this is the first work to address the mirror segmentation problem with a computational approach. We make the following contributions. First, we construct a large-scale mirror dataset that contains mirror images with the corresponding manually annotated masks. This dataset covers a variety of daily life scenes, and will be made publicly available for future research. Second, we propose a novel network, called MirrorNet, for mirror segmentation, by modeling both semantical and low-level color/texture discontinuities between the contents inside and outside of the mirrors. Third, we conduct extensive experiments to evaluate the proposed method, and show that it outperforms the carefully chosen baselines from the state-of-the-art detection and segmentation methods.
+<p><font size="5" face="Palatino Linotype">Recently, single-image super-resolution has made great progress due to the development of deep convolutional neural networks (CNNs). The vast majority of CNN-based models use a predefined upsampling operator, such as bicubic interpolation, to upscale input low-resolution images to the desired size and learn nonlinear mapping between the interpolated image and ground truth high-resolution (HR) image. However, interpolation processing can lead to visual artifacts as details are over smoothed, particularly when the super-resolution factor is high. In this paper, we propose a deep recurrent fusion network (DRFN), which utilizes transposed convolution instead of bicubic interpolation for upsampling and integrates different-level features extracted from recurrent residual blocks to reconstruct the final HR images. We adopt a deep recurrence learning strategy and, thus, have a larger receptive field, which is conducive to reconstructing an image more accurately. Furthermore, we show that the multilevel fusion structure is suitable for dealing with image super-resolution problems. Extensive benchmark evaluations demonstrate that the proposed DRFN performs better than most current deep learning methods in terms of accuracy and visual effects, especially for large-scale images, while using fewer parameters.
 </font></p>
 
 
@@ -69,7 +68,7 @@ body {
 		<table>						
 		<tr align="left">
 		<td>
-		<font size="5"><a href="https://arxiv.org/abs/1804.04371">[MirrorNet.pdf]</font></a>
+			<font size="5"><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8425771">[DRFN.pdf]</a></font>
 		</td>
 		<td>
 			<font size="5">: The paper.</font>
@@ -78,7 +77,7 @@ body {
 							
 		<tr align="left">
 		<td>
-		<font size="5"><a href="https://drive.google.com/file/d/1qLWVostJxDGW4udVz4QDyL3126mIbCJG/view?usp=sharing">[Results.zip]</font></a>
+		<font size="5">[Results.zip]</font>
 		</td>
 		<td>
 			<font size="5">: Experimental results.</font>
@@ -87,7 +86,7 @@ body {
 					
 		<tr align="left">
 		<td>
-		<font size="5"><a href="https://github.com/mhaiyang/ICCV2019_MirrorNet">[Code]</font></a>
+		<font size="5"><a href="https://github.com/Mhaiyang/DRFN">[Code]</a></font>
 		</td>
 		<td>
 			<font size="5">: Source code.</font>
@@ -101,15 +100,19 @@ body {
 <br>
 
 
-<h2><p><font size="6" color="black"><b>BibTex</b>&nbsp(DOI)</p></h2>
+<h2><p><font size="6" color="black"><b>BibTex</b>&nbsp(DOI)</font></p></h2>
 <hr/>								
-<font size="5">
-@inproceedings{yang2019mirrornet,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;author = {Yang, Xin and Mei, Haiyang and Xu, Ke and Wei, Xiaopeng and Yin, Baocai and Rynson, Lau},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;title = {Where is My Mirror?},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {IEEE International Conference on Computer Vision},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;year = {2019},<br>
-&nbsp;&nbsp;}
+<font size="4">
+@article{yang2018drfn,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title={DRFN: Deep Recurrent Fusion Network for Single-Image Super-Resolution With Large Factors},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;author={Yang, Xin and Mei, Haiyang and Zhang, Jiqing and Xu, Ke and Yin, Baocai and Zhang, Qiang and Wei, Xiaopeng},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;journal={IEEE Transactions on Multimedia},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;volume={21},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number={2},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pages={328--337},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;year={2018},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;publisher={IEEE}<br>
+}
 </font>
 
 

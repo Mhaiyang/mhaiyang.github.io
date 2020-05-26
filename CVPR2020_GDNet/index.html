@@ -48,47 +48,58 @@ var _hmt = _hmt || [];
 <h1>Don't Hit Me! Glass Detection in Real-world Scenes</h1>
 <h3>
 	<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
-	<font size="3">Xin Yang</font><sup><font size="2">1,2,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3">Xin Yang</font><sup><font size="2">1,4,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3">Yang Wang</font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3">Yuanyuan Liu</font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3">Shengfeng He</font><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<br>
-	<font size="3">Shengfeng He</font><sup><font size="2">3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3">Qiang Zhang</font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3">Xiaopeng Wei</font><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="http://www.cs.cityu.edu.hk/~rynson/" target="_blank"><font size="3">Rynson W.H. Lau</font></a><sup><font size="2">4</font></sup>
+	<a href="http://www.cs.cityu.edu.hk/~rynson/" target="_blank"><font size="3">Rynson W.H. Lau</font></a><sup><font size="2">3</font></sup>
 </h3>
 
 <sup><font size="2">1</font></sup>
 <b><a><font size="3">Dalian University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
 <sup><font size="2">2</font></sup>
-<b><a><font size="3">Advanced Institute of Information Technology Peking University</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<b><a><font size="3">South China University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
 <sup><font size="2">3</font></sup>
-<b><a><font size="3">South China University of Technology</font></a></b>
+<b><a><font size="3">City University of Hong Kong</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
 <sup><font size="2">4</font></sup>
-<b><a><font size="3">City University of Hong Kong</font></a></b>
+<b><a><font size="3">Advanced Institute of Information Technology Peking University</font></a></b>
 
 <!--<br>-->
 <!--<br>&nbsp;-->
 <!--&lt;!&ndash;<sup><font size="2">&dagger;</font></sup>&ndash;&gt;-->
-<!--<sup><font size="2">*</font></sup>-->
-<!--<a><font size="2"> Corresponding author</font></a>-->
+<!--<sup><font size="3">*</font></sup>-->
+<!--<a><font size="3"> Corresponding author</font></a>-->
+<br>
+<br>&nbsp;
+
+	<b><a><font size="3"> Contact us:&nbsp;&nbsp;&nbsp;&nbsp;<i>xinyang@dlut.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;mhy666@mail.dlut.edu.cn</i></font></a></b>
 
 </td>
 </table>
 
 
-<br>
+<br><br>
 <table align="center">
 <tr>
-	<td align="center"><img border=0 height=350 width=800 src="Glass.gif"></td>
+	<td align="center"><embed src="9250-1min.mp4" width="640" height="360"></td>
 </tr>
 </table>
 
+<!--<br>-->
+<!--<table align="center">-->
+<!--<tr>-->
+	<!--<td align="center"><img border=0 height=350 width=800 src="Glass.gif"></td>-->
+<!--</tr>-->
+<!--</table>-->
 
 <br>
 <h2><p><font size="6"><b>Abstract</b></font></p></h2>
 <hr/>
-<p><font size="4" face="Palatino Linotype">Glass is very common in our daily life. Existing computer vision systems neglect the glass and thus might lead to severe consequence, \eg, the robot might crash into the glass wall. However, sensing the presence of the glass is not straightforward. The key challenge is that arbitrary objects/scenes can appear behind the glass and the content presented in the glass region typically similar to those outside of it. In this paper, we raise an interesting but important problem of detecting glass from a single RGB image. To address this problem, we construct a large-scale glass detection dataset (GDD) and design a glass detection network, called GDNet, by learning abundant contextual features from a global perspective with a novel large-field contextual feature integration module. Extensive experiments demonstrate the proposed method achieves superior glass detection results on our GDD test set. Particularly, we outperform state-of-the-art methods that fine-tuned for glass detection.
+<p><font size="4" face="Palatino Linotype">Glass is very common in our daily life. Existing computer vision systems neglect the glass and thus might lead to severe consequence, e.g., the robot might crash into the glass wall. However, sensing the presence of the glass is not straightforward. The key challenge is that arbitrary objects/scenes can appear behind the glass and the content presented in the glass region typically similar to those outside of it. In this paper, we raise an interesting but important problem of detecting glass from a single RGB image. To address this problem, we construct a large-scale glass detection dataset (GDD) and design a glass detection network, called GDNet, by learning abundant contextual features from a global perspective with a novel large-field contextual feature integration module. Extensive experiments demonstrate the proposed method achieves superior glass detection results on our GDD test set. Particularly, we outperform state-of-the-art methods that fine-tuned for glass detection.
 </font></p>
 
 
@@ -165,7 +176,8 @@ var _hmt = _hmt || [];
 			<font size="4">Paper</font>
 		</td>
 		<td>
-			<font size="4">: <a href="" target="_blank">[ GDNet.pdf ]</a></font>
+			<font size="4">: [ GDNet.pdf ]</font>
+			<!--<font size="4">: <a href="" target="_blank">[ GDNet.pdf ]</a></font>-->
 		</td>
 		</tr>
 
@@ -174,7 +186,8 @@ var _hmt = _hmt || [];
 			<font size="4">Glass Detection Dataset</font>
 		</td>
 		<td>
-		<font size="4">: <a href="" target="_blank">[ Google Drive ]</a></font>
+		<font size="4">: [ Google Drive ]</font>
+		<!--<font size="4">: <a href="" target="_blank">[ Google Drive ]</a></font>-->
 		</td>
 		</tr>
 							
@@ -193,7 +206,8 @@ var _hmt = _hmt || [];
 			<font size="4">Pre-trained model.</font>
 		</td>
 		<td>
-			<font size="4">: <a href="" target="_blank">[ GDNet.pth ]</a></font>
+			<font size="4">: [ GDNet.pth ]</font>
+			<!--<font size="4">: <a href="" target="_blank">[ GDNet.pth ]</a></font>-->
 		</td>
 		</tr>
 					
@@ -202,7 +216,8 @@ var _hmt = _hmt || [];
 			<font size="4">Source Code.</font>
 		</td>
 		<td>
-			<font size="4">: <a href="" target="_blank">[ Code ]</a> </font>
+			<font size="4">: [ Code ]</font>
+			<!--<font size="4">: <a href="" target="_blank">[ Code ]</a> </font>-->
 		</td>
 		</tr>	
 			
@@ -215,7 +230,7 @@ var _hmt = _hmt || [];
 
 <h2><p><font size="6" color="black"><b>BibTex</b></font></p></h2>
 <hr/>								
-<font size="4">
+<font size="3">
 @InProceedings{Mei_2020_CVPR,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;author = {Mei, Haiyang and Yang, Xin and Wang, Yang and Liu, Yuanyuan and He, Shengfeng and Zhang, Qiang and Wei, Xiaopeng and Lau, Rynson W.H.},<br>
 &nbsp;&nbsp;&nbsp;&nbsp;title = {Don't Hit Me! Glass Detection in Real-world Scenes},<br>

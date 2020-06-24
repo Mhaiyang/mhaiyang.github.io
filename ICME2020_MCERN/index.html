@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ICME2020_MCERN</title>
+
+<style media="screen" type="text/css">
+body
+{
+  border: 0pt none;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0pt;
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0pt;
+  padding: 0pt;
+  vertical-align: baseline;
+}
+body {
+  position: relative;
+  margin: 3em auto 2em auto;
+  width: 1080px;
+  font-family: Times New Roman, Lato, Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  background: #fdfdfd;
+}
+</style>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1ec4ad5c61857459aa78d5ee7ddee28d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+<h3 align="center"><i><font size="3" face="Palatino Linotype">IEEE International Conference on Multimedia and Expo (ICME) 2020</font></i></h3>
+
+<table align="center">
+<td align="center">
+<h1>Multi-Context And Enhanced Reconstruction Network <br>For Single Image Super Resolution</h1>
+<h3>
+	<font size="3">Jiqing Zhang</font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://www.chengjianglong.com/" target="_blank"><font size="3">Chengjiang Long</font></a><sup><font size="2">2,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3">Yuxin Wang</font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="https://xinyangdut.github.io/" target="_blank"><font size="3"><b>Xin Yang</b></font></a><sup><font size="2">1,4,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3">Baocai Yin</font><sup><font size="2">1,3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+
+</h3>
+
+<sup><font size="2">1</font></sup>
+<b><a><font size="3">Dalian University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">2</font></sup>
+<b><a><font size="3">Kitware Inc.</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+<sup><font size="2">3</font></sup>
+<b><a><font size="3">Peng Cheng Laboratory</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">4</font></sup>
+<b><a><font size="3">Beijing Technology and Business University</font></a></b>
+
+<!--<br>-->
+<!--<br>&nbsp;-->
+<!--&lt;!&ndash;<sup><font size="2">&dagger;</font></sup>&ndash;&gt;-->
+<!--<sup><font size="3">*</font></sup>-->
+<!--<a><font size="3"> Corresponding author</font></a>-->
+<br>
+<br>&nbsp;
+
+	<b><a><font size="3"> Contact us:&nbsp;&nbsp;&nbsp;&nbsp;<i>zhangjiqing@mail.dlut.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;xinyang@dlut.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;mhy666@mail.dlut.edu.cn</i></font></a></b>
+
+</td>
+</table>
+
+
+<br><br>
+<table align="center">
+<tr>
+	<td align="center"><embed src="9250-1min.mp4" width="640" height="360"></td>
+</tr>
+</table>
+
+<!--<br>-->
+<!--<table align="center">-->
+<!--<tr>-->
+	<!--<td align="center"><img border=0 height=350 width=800 src="Glass.gif"></td>-->
+<!--</tr>-->
+<!--</table>-->
+
+<br>
+<h2><p><font size="6"><b>Abstract</b></font></p></h2>
+<hr/>
+<p><font size="4" face="Palatino Linotype">Most existing single image super-resolution (SISR) methods continually increase the depth or width of networks, without adequately exploring contextual features which are essential for reconstruction. Moreover, such existing methods pay little attention to the final high-resolution(HR) image reconstruction step and therefore hinder the desired SR performance. In this paper, we propose a multi-context and enhanced reconstruction network (MCERN) for SISR. Specifically, a novel model named Multi-Context Block (MCB) which extracts more image contextual features with multibranch dilated convolution. Applying multiple MCBs with residual and dense connections, we can effectively extract contextual and hierarchical features for obtaining the coarse super-resolution result. Then an enhanced reconstruction block (ERB) is followed to extract essential spatial features on the high-resolution image to refine the coarse result to a better result. Extensive benchmark evaluations demonstrate the efficacy of our proposed MCERN in terms of metric accuracy and visual effects.
+</font></p>
+
+
+<br>
+<h2><p><font size="6"><b>MCERN</b></font></p></h2>
+<hr/>
+<table align="center">
+<tr>
+	<td align="center"><img border=0 height=200 width=1080 src="pipeline.jpg"></td>
+</tr>
+</table>
+
+<br>
+<h2><p><font size="6"><b>Visual Results</b></font></p></h2>
+<hr/>
+<table align="center">
+<tr>
+	<td align="center"><img border=0 height=220 width=1080 src="visual.jpg"></td>
+</tr>
+</table>
+
+
+<br>
+<h2><p><font size="6"><b>Downloads</b></font></p></h2>
+<hr/>
+<div align="left">
+		<table>						
+		<tr align="left">
+		<td>
+			<font size="4">Paper</font>
+		</td>
+		<td>
+			<!--<font size="4">: [ GDNet.pdf ]</font>-->
+			<font size="4">: <a href="ICME_2020_MCERN.pdf" target="_blank">[ MCERN.pdf ]</a></font>
+		</td>
+		</tr>
+
+		<!--<tr align="left">-->
+		<!--<td>-->
+			<!--<font size="4">Glass Detection Dataset</font>-->
+		<!--</td>-->
+		<!--<td>-->
+		<!--<font size="4">: [ Google Drive ]</font>-->
+		<!--&lt;!&ndash;<font size="4">: <a href="" target="_blank">[ Google Drive ]</a></font>&ndash;&gt;-->
+		<!--</td>-->
+		<!--</tr>-->
+							
+		<tr align="left">
+		<td>
+			<font size="4">Experimental results</font>
+		</td>
+		<td>
+		<font size="4">: [ Results.zip ]</font>
+		</td>
+
+		</tr>
+
+		<tr align="left">
+		<td>
+			<font size="4">Pre-trained model.</font>
+		</td>
+		<td>
+			<font size="4">: [ GDNet.pth ]</font>
+			<!--<font size="4">: <a href="" target="_blank">[ GDNet.pth ]</a></font>-->
+		</td>
+		</tr>
+					
+		<tr align="left">
+		<td>
+			<font size="4">Source Code.</font>
+		</td>
+		<td>
+			<font size="4">: [ Code ]</font>
+			<!--<font size="4">: <a href="" target="_blank">[ Code ]</a> </font>-->
+		</td>
+		</tr>	
+			
+			
+		</table>
+</div>
+<br>
+<br>
+
+
+
+<h2><p><font size="6" color="black"><b>BibTex</b></font></p></h2>
+<hr/>
+<font size="3">
+@InProceedings{Zhang_2020_ICME,<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;author={J. {Zhang} and C. {Long} and Y. {Wang} and X. {Yang} and H. {Mei} and B. {Yin}},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;booktitle={IEEE International Conference on Multimedia and Expo (ICME)}, <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;title={Multi-Context And Enhanced Reconstruction Network For Single Image Super Resolution}, <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;year={2020},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;volume={},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;number={},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;pages={1-6},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;doi={10.1109/ICME46284.2020.9102868},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;ISSN={1945-788X},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;month={July},<br>
+}
+</font>
+
+<br><br>
+<h2>Website visit statistics</h2>
+<hr/>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=400&t=tt&d=ZXX4dUsb2jA8wDoUQaofikwHAlXOeKZODm1d9NP7DMU'></script>
+
+
+
+</body>
+
+</html>

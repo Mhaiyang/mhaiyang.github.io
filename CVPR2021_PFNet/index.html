@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CVPR2021_PDNet</title>
+<title>CVPR2021_PFNet</title>
 
 <style media="screen" type="text/css">
 body
@@ -45,24 +45,24 @@ var _hmt = _hmt || [];
 
 <table align="center">
 <td align="center">
-<h1>Depth-Aware Mirror Segmentation</h1>
+<h1>Camouflaged Object Segmentation with Distraction Mining</h1>
 <h3>
 	<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="https://dongshuhao.github.io/" target="_blank"><font size="3"><b>Bo Dong</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
-	<font size="3"><b>Wen Dong</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="http://www.cs.wm.edu/~ppeers/" target="_blank"><font size="3"><b>Pieter Peers</b></font></a><sup><font size="2">3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Gepeng Ji</b></font><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Ziqi Wei</b></font><sup><font size="2">3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="http://faculty.dlut.edu.cn/yangxin/zh_CN/index/949121/list/index.htm" target="_blank"><font size="3"><b>Xin Yang</b></font></a><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
-	<br>
-	<font size="3">Qiang Zhang</font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
-	<font size="3">Xiaopeng Wei</font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://dpfan.net" target="_blank"><font size="3"><b>Deng-Ping Fan</b></font></a><sup><font size="2">4</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<!--<font size="3">Xiaopeng Wei</font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
 </h3>
 
 <sup><font size="2">1</font></sup>
 <b><a><font size="3">Dalian University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
 <sup><font size="2">2</font></sup>
-<b><a><font size="3">SRI International</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<b><a><font size="3">Wuhan University</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
 <sup><font size="2">3</font></sup>
-<b><a><font size="3">College of William & Mary</font></a></b>
+<b><a><font size="3">Tsinghua University</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">4</font></sup>
+<b><a><font size="3">IIAI</font></a></b>
 
 <!--<br>-->
 <!--<br>&nbsp;-->
@@ -81,7 +81,7 @@ var _hmt = _hmt || [];
 <br><br>
 <table align="center">
 <tr>
-	<td align="center"><img border=0 height=450 width=900 src="mirror.gif"></td>
+	<td align="center"><img border=0 height=450 width=900 src="camouflaged.gif"></td>
 </tr>
 </table>
 
@@ -95,12 +95,12 @@ var _hmt = _hmt || [];
 <br>
 <h2><p><font size="6"><b>Abstract</b></font></p></h2>
 <hr/>
-<p><font size="4" face="Palatino Linotype">We present a novel mirror segmentation method that leverages depth estimates from ToF-based cameras as an additional cue to disambiguate challenging cases where the contrast or relation in RGB colors between the mirror re-flection and the surrounding scene is subtle. A key observation is that ToF depth estimates do not report the true depth of the mirror surface, but instead return the total length ofthe reflected light paths, thereby creating obvious depth dis-continuities at the mirror boundaries. To exploit depth information in mirror segmentation, we first construct a large-scale RGB-D mirror segmentation dataset, which we subse-quently employ to train a novel depth-aware mirror segmentation framework. Our mirror segmentation framework first locates the mirrors based on color and depth discontinuities and correlations. Next, our model further refines the mirror boundaries through contextual contrast taking into accountboth color and depth information. We extensively validate our depth-aware mirror segmentation method and demonstrate that our model outperforms state-of-the-art RGB and RGB-D based methods for mirror segmentation. Experimental results also show that depth is a powerful cue for mirror segmentation.
+<p><font size="4" face="Palatino Linotype">Camouflaged object segmentation (COS) aims to identify objects that are ''perfectly'' assimilate into their surroundings, which has a wide range of valuable applications. The key challenge of COS is that there exist high intrinsic similarities between the candidate objects and noise background. In this paper, we strive to embrace challenges towards effective and efficient COS. To this end, we develop a bio-inspired framework, termed Positioning and Focus Network (PFNet), which mimics the process of predation in nature. Specifically, our PFNet contains two key modules, i.e., the positioning module (PM) and the focus module (FM). The PM is designed to mimic the detection process in predation for positioning the potential target objects from a global perspective and the FM is then used to perform the identification process in predation for progressively refining the coarse prediction via focusing on the ambiguous regions. Notably, in the FM, we develop a novel distraction mining strategy for the distraction region discovery and removal, to benefit the performance of estimation. Extensive experiments demonstrate that our PFNet runs in real-time (72 FPS) and significantly outperforms 18 cutting-edge models on three challenging benchmark datasets under four standard metrics. The code will be made publicly available.
 </font></p>
 
 
 <br>
-<h2><p><font size="6"><b>PDNet</b></font></p></h2>
+<h2><p><font size="6"><b>PFNet</b></font></p></h2>
 <hr/>
 <table align="center">
 <tr>
@@ -128,7 +128,7 @@ var _hmt = _hmt || [];
 			<font size="4">Paper</font>
 		</td>
 		<td>
-			<font size="4">: [ PDNet.pdf ]</font>
+			<font size="4">: [ PFNet.pdf ]</font>
 			<!--<font size="4">: <a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Mei_Dont_Hit_Me_Glass_Detection_in_Real-World_Scenes_CVPR_2020_paper.pdf" target="_blank">[ GDNet.pdf ]</a></font>-->
 		</td>
 		</tr>
@@ -159,7 +159,7 @@ var _hmt = _hmt || [];
 			<font size="4">Pre-trained model.</font>
 		</td>
 		<td>
-			<font size="4">: [ PDNet.pth ]</font>
+			<font size="4">: [ PFNet.pth ]</font>
 			<!--<font size="4">: <a href="https://drive.google.com/file/d/1xOwuH9lWizGVnPmEH77_81Sp9EAN054O/view?usp=sharing" target="_blank">[ GDNet.pth ]</a></font>-->
 		</td>
 		</tr>
@@ -210,8 +210,8 @@ var _hmt = _hmt || [];
 <hr/>
 <font size="3">
 @InProceedings{Mei_2021_CVPR,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;author = {Mei, Haiyang and Dong, Bo and Dong, Wen and Peers, Pieter and Yang, Xin and Zhang, Qiang and Wei, Xiaopeng},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;title = {Depth-Aware Mirror Segmentation},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;author = {Mei, Haiyang and Ji, Gepeng and Wei, Ziqi and Yang, Xin and Fan Dengping},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title = {Camouflaged Object Segmentation with Distraction Mining},<br>
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br>
 &nbsp;&nbsp;&nbsp;&nbsp;month = {June},<br>
 &nbsp;&nbsp;&nbsp;&nbsp;year = {2021}<br>

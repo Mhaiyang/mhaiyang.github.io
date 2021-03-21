@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TCSVT2021_DCENet</title>
+
+<style media="screen" type="text/css">
+body
+{
+  border: 0pt none;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0pt;
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0pt;
+  padding: 0pt;
+  vertical-align: baseline;
+}
+body {
+  position: relative;
+  margin: 3em auto 2em auto;
+  width: 1080px;
+  font-family: Times New Roman, Lato, Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  background: #fdfdfd;
+}
+</style>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1ec4ad5c61857459aa78d5ee7ddee28d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+<h3 align="center"><i><font size="3" face="Palatino Linotype">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT) 2021</font></i></h3>
+
+<table align="center">
+<td align="center">
+<h1>Exploring Dense Context for Salient Object Detection</h1>
+<h3>
+	<!--<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
+	<!--<font size="3"><b>Ge-Peng Ji</b></font><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
+	<!--<font size="3"><b>Ziqi Wei</b></font><sup><font size="2">3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
+	<!--<a href="http://faculty.dlut.edu.cn/yangxin/zh_CN/index/949121/list/index.htm" target="_blank"><font size="3"><b>Xin Yang</b></font></a><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
+	<!--<font size="3"><b>Xiaopeng Wei</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
+	<!--<a href="http://dpfan.net" target="_blank"><font size="3"><b>Deng-Ping Fan</b></font></a><sup><font size="2">4</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
+	<!--<font size="3">Xiaopeng Wei</font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
+</h3>
+
+
+<!--<sup><font size="2">1</font></sup>-->
+<!--<b><a><font size="3">Dalian University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--<sup><font size="2">2</font></sup>-->
+<!--<b><a><font size="3">Wuhan University</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--<sup><font size="2">3</font></sup>-->
+<!--<b><a><font size="3">Tsinghua University</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--<sup><font size="2">4</font></sup>-->
+<!--<b><a><font size="3">IIAI</font></a></b>-->
+
+<!--<br>-->
+<!--<br>&nbsp;-->
+<!--&lt;!&ndash;<sup><font size="2">&dagger;</font></sup>&ndash;&gt;-->
+<!--<sup><font size="3">*</font></sup>-->
+<!--<a><font size="3"> Corresponding author</font></a>-->
+<br>
+<br>&nbsp;
+
+	<b><a><font size="3"> Contact us:&nbsp;&nbsp;&nbsp;&nbsp;<i>xinyang@dlut.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;mhy666@mail.dlut.edu.cn</i></font></a></b>
+
+</td>
+</table>
+
+
+<br><br>
+<table align="center">
+<tr>
+	<td align="center"><img border=0 height=450 width=900 src="camouflaged.gif"></td>
+</tr>
+</table>
+
+<!--<br>-->
+<!--<table align="center">-->
+<!--<tr>-->
+	<!--<td align="center"><img border=0 height=350 width=800 src="Glass.gif"></td>-->
+<!--</tr>-->
+<!--</table>-->
+
+<br>
+<h2><p><font size="6"><b>Abstract</b></font></p></h2>
+<hr/>
+<p><font size="4" face="Palatino Linotype">Contexts play an important role in salient object detection (SOD). High-level contexts describe the relations between different parts/objects and thus are helpful for discovering the specific locations of salient objects while low-level contexts could provide the fine detail information for delineating the boundary of the salient objects. However, the way of perceiving/leveraging rich contexts has not been fully investigated by existing SOD works. The common context extraction strategies (\emph{e.g.}, leveraging convolutions with large kernels or atrous convolutions with large dilation rates) do not consider the effectiveness and efficiency simultaneously and may cause sub-optimal solutions. In this paper, we devote to exploring an effective and efficient way to learn rich contexts for accurate SOD. Specifically, we first build a dense context exploration (DCE) module to capture dense multi-scale contexts and further leverage the learned contexts to enhance the features discriminability. Then, we embed multiple DCE modules in an encoder-decoder architecture to harvest dense contexts of different levels. Furthermore, we propose an attentive skip-connection to transmit useful features from the encoder part to the decoder part for better dense context exploration. Finally, extensive experiments demonstrate that the proposed method achieves more superior detection results on the six benchmark datasets than 18 state-of-the-art SOD methods.
+</font></p>
+
+
+<br>
+<h2><p><font size="6"><b>DCENet</b></font></p></h2>
+<hr/>
+<table align="center">
+<tr>
+	<!--<td align="center"><img border=0 height=270 width=960 src="pipeline.png"></td>-->
+</tr>
+</table>
+
+<br>
+<h2><p><font size="6"><b>Visual Results</b></font></p></h2>
+<hr/>
+<table align="center">
+<tr>
+	<!--<td align="center"><img border=0 height=300 width=900 src="CVPR2020_Glass_1.gif"></td>-->
+</tr>
+</table>
+
+
+<br>
+<h2><p><font size="6"><b>Downloads</b></font></p></h2>
+<hr/>
+<div align="left">
+		<table>
+		<tr align="left">
+		<td>
+			<font size="4">Paper</font>
+		</td>
+		<td>
+			<font size="4">: [ DCENet.pdf ]</font>
+			<!--<font size="4">: <a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Mei_Dont_Hit_Me_Glass_Detection_in_Real-World_Scenes_CVPR_2020_paper.pdf" target="_blank">[ GDNet.pdf ]</a></font>-->
+		</td>
+		</tr>
+
+		<!--<tr align="left">-->
+		<!--<td>-->
+			<!--<font size="4">Glass Detection Dataset</font>-->
+		<!--</td>-->
+		<!--<td>-->
+		<!--<font size="4">: [ Google Drive ]</font>-->
+		<!--&lt;!&ndash;<font size="4">: <a href="" target="_blank">[ Google Drive ]</a></font>&ndash;&gt;-->
+		<!--</td>-->
+		<!--</tr>-->
+
+		<tr align="left">
+		<td>
+			<font size="4">Experimental results</font>
+		</td>
+		<td>
+		<font size="4">: [ Results.zip ]</font>
+		<!--<font size="4">: <a href="https://drive.google.com/file/d/19Oa5Nnw_UKFE7SHSatHrU-5hHJYE3A9G/view?usp=sharing" target="_blank">[ Results.zip ]</a></font>-->
+		</td>
+
+		</tr>
+
+		<tr align="left">
+		<td>
+			<font size="4">Pre-trained model.</font>
+		</td>
+		<td>
+			<font size="4">: [ DCENet.pth ]</font>
+			<!--<font size="4">: <a href="https://drive.google.com/file/d/1xOwuH9lWizGVnPmEH77_81Sp9EAN054O/view?usp=sharing" target="_blank">[ GDNet.pth ]</a></font>-->
+		</td>
+		</tr>
+
+		<tr align="left">
+		<td>
+			<font size="4">Source Code.</font>
+		</td>
+		<td>
+			<font size="4">: [ Code ]</font>
+			<!--<font size="4">: <a href="https://github.com/Mhaiyang/CVPR2020_GDNet" target="_blank">[ Code ]</a> </font>-->
+		</td>
+		</tr>
+
+
+		</table>
+</div>
+<br>
+<br>
+
+
+<h2><p><font size="6" color="black"><b>Dataset</b></font></p></h2>
+<hr/>
+
+<!--<font size="4"> Both <font size="4" color="red">training set</font> and <font size="4" color="red">testing set</font> can be obtained via e-mail request! </font>-->
+<!--<br><br>-->
+
+<!--<font size="3">-->
+	<!--To request access to the dataset for non-commercial use, please review the terms and conditions. If you agree with them, please send us a request (<b>Prof. Xin Yang, xinyang@dlut.edu.cn</b>). Also, please use your official university/company email address. Thank you!-->
+
+	<!--<br>-->
+	<!--<br>-->
+
+	<!--<b>Terms and Conditions</b>-->
+	<!--<br>-->
+
+<!--The dataset can be used freely if you agree with all the following terms.<br>-->
+
+<!-- - The dataset is used only for non-commercial purposes, such as teaching and research. You do not use the dataset or any of its modified versions for any purposes of commercial advantage or private financial gain.<br>-->
+<!-- - You do not distribute the dataset or any of its modified versions to other individuals, institutes, companies, associations or public.<br>-->
+<!-- - In case you use the dataset within your research papers, you refer to our publications on our website. If the dataset is used in media, a link to our website is included.<br>-->
+<!-- - We reserve all rights that are not explicitly granted to you. The dataset is provided as is, and you take full responsibility for any risk of using it. There may be inaccuracies although we tried, and will try our best to rectify any inaccuracy once found.-->
+
+</font>
+
+
+<h2><p><font size="6" color="black"><b>BibTex</b></font></p></h2>
+<hr/>
+<font size="3">
+@InProceedings{Mei_2021_TCSVT,<br>
+<!--&nbsp;&nbsp;&nbsp;&nbsp;author = {Mei, Haiyang and Ji, Ge-Peng and Wei, Ziqi and Yang, Xin and Wei, Xiaopeng and Fan, Deng-Ping},<br>-->
+&nbsp;&nbsp;&nbsp;&nbsp;title = {Exploring Dense Context for Salient Object Detection},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)},<br>
+<!--&nbsp;&nbsp;&nbsp;&nbsp;month = {June},<br>-->
+&nbsp;&nbsp;&nbsp;&nbsp;year = {2021}<br>
+}
+</font>
+
+
+<br><br>
+<h2>Website visit statistics</h2>
+<hr/>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=400&t=n&d=oltD0PapAwP93FMgNPzI2JHNLRqAH6vR4MZNpNrmmHY'></script>
+
+</body>
+
+</html>

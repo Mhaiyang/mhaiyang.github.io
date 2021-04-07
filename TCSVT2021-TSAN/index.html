@@ -49,10 +49,11 @@ var _hmt = _hmt || [];
 <h1>A Two-Stage Attentive Network for Single Image Super-Resolution</h1>
 <h3>
 	<font size="3"><b>Jiqing Zhang</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
-	<font size="3"><b>Chengjiang Long</b></font><sup><font size="2">2,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://www.chengjianglong.com/" target="_blank"><font size="3"><b>Chengjiang Long</b></font></a><sup><font size="2">2,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3"><b>Yuxin Wang</b></font><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3"><b>Haiyin Piao</b></font><sup><font size="2">3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+
 	<a href="http://faculty.dlut.edu.cn/yangxin/zh_CN/index/949121/list/index.htm" target="_blank"><font size="3"><b>Xin Yang</b></font></a><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3"><b>Baocai Yin</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 </h3>
@@ -94,18 +95,18 @@ var _hmt = _hmt || [];
 <br>
 <h2><p><font size="6"><b>Abstract</b></font></p></h2>
 <hr/>
-<p><font size="4" face="Palatino Linotype">Contexts play an important role in salient object detection (SOD). High-level contexts describe the relations between different parts/objects and thus are helpful for discovering the specific locations of salient objects while low-level contexts could provide the fine detail information for delineating the boundary of the salient objects. However, the way of perceiving/leveraging rich contexts has not been fully investigated by existing SOD works. The common context extraction strategies (\emph{e.g.}, leveraging convolutions with large kernels or atrous convolutions with large dilation rates) do not consider the effectiveness and efficiency simultaneously and may cause sub-optimal solutions. In this paper, we devote to exploring an effective and efficient way to learn rich contexts for accurate SOD. Specifically, we first build a dense context exploration (DCE) module to capture dense multi-scale contexts and further leverage the learned contexts to enhance the features discriminability. Then, we embed multiple DCE modules in an encoder-decoder architecture to harvest dense contexts of different levels. Furthermore, we propose an attentive skip-connection to transmit useful features from the encoder part to the decoder part for better dense context exploration. Finally, extensive experiments demonstrate that the proposed method achieves more superior detection results on the six benchmark datasets than 18 state-of-the-art SOD methods.
+<p><font size="4" face="Palatino Linotype">Recently, deep convolutional neural networks (CNNs) have been widely explored in single image superresolution (SISR) and contribute remarkable progress. However, most of the existing CNNs-based SISR methods do not adequately explore contextual information in the feature extraction stage and pay little attention to the final high-resolution (HR) image reconstruction step, hence hindering the desired SR performance. To address the above two issues, in this paper, we propose a twostage attentive network (TSAN) for accurate SISR in a coarse-tofine manner. Specifically, we design a novel multi-context attentive block (MCAB) to make the network focus on more informative contextual features. Moreover, we present an essential refined attention block (RAB) which could explore useful cues in HR space for reconstructing fine-detailed HR image. Extensive evaluations on four benchmark datasets demonstrate the efficacy of our proposed TSAN in terms of quantitative metrics and visual effects.
 </font></p>
 
 
-<br>
-<h2><p><font size="6"><b>TSAN</b></font></p></h2>
-<hr/>
-<table align="center">
-<tr>
-	<!--<td align="center"><img border=0 height=270 width=960 src="pipeline.png"></td>-->
-</tr>
-</table>
+<!--<br>-->
+<!--<h2><p><font size="6"><b>TSAN</b></font></p></h2>-->
+<!--<hr/>-->
+<!--<table align="center">-->
+<!--<tr>-->
+	<!--&lt;!&ndash;<td align="center"><img border=0 height=270 width=960 src="pipeline.png"></td>&ndash;&gt;-->
+<!--</tr>-->
+<!--</table>-->
 
 <br>
 <h2><p><font size="6"><b>Visual Results</b></font></p></h2>
@@ -180,8 +181,8 @@ var _hmt = _hmt || [];
 <br>
 
 
-<h2><p><font size="6" color="black"><b>Dataset</b></font></p></h2>
-<hr/>
+<!--<h2><p><font size="6" color="black"><b>Dataset</b></font></p></h2>-->
+<!--<hr/>-->
 
 <!--<font size="4"> Both <font size="4" color="red">training set</font> and <font size="4" color="red">testing set</font> can be obtained via e-mail request! </font>-->
 <!--<br><br>-->
@@ -202,7 +203,7 @@ var _hmt = _hmt || [];
 <!-- - In case you use the dataset within your research papers, you refer to our publications on our website. If the dataset is used in media, a link to our website is included.<br>-->
 <!-- - We reserve all rights that are not explicitly granted to you. The dataset is provided as is, and you take full responsibility for any risk of using it. There may be inaccuracies although we tried, and will try our best to rectify any inaccuracy once found.-->
 
-</font>
+<!--</font>-->
 
 
 <h2><p><font size="6" color="black"><b>BibTex</b></font></p></h2>

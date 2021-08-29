@@ -14,9 +14,9 @@
 
 $('#btnSubmit').click(function(e){
     var templateParams = {
-        to_name: $('#first').val(),
-        from_name: $('#second').val(),
-        message: $('#third').val()
+        name: $('#first').val(),
+        institute: $('#second').val(),
+        email: $('#third').val()
     };
     emailjs.send('service_xbodefd', 'CVPR2021_PDNet', templateParams)
     .then(function(response) {

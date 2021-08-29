@@ -27,4 +27,3 @@ $('#btnSubmit').click(function(e){
        alert("Your Request failed!")
     });
 });
-

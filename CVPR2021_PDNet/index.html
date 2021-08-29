@@ -37,7 +37,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
 </head>
 
 <body>
@@ -210,16 +210,17 @@ The dataset can be used freely if you agree with all the following terms.<br>
 
 <h3>Sending Request to: xinyang@dlut.edu.cn:</h3>
 
-<form class="form">
-    <input name='name' type="text" placeholder="Your name..."
+<form class="form" id="emailForm">
+    <input id="first" name='name' type="text" placeholder="Your name..."
     class="form__input" />
-    <input name='topic' type="text" placeholder="Topic..."
+    <input id="second" name='institution' type="text" placeholder="Topic..."
     class="form__input" />
-    <textarea name='message' type="text" placeholder="Your Message..."
+    <textarea id="third" name='message' type="text" placeholder="Your Message..."
     class="form__input"></textarea>
-    <input type="submit" value="send"
-    class="form__input form__input--button">
+    <!--<input type="submit" value="send"-->
+    <!--class="form__input form__input&#45;&#45;button">-->
 </form>
+<button id="btnSubmit">Send</button>
 
 
 <h2><p><font size="6" color="black"><b>Report</b></font></p></h2>
@@ -248,6 +249,15 @@ The dataset can be used freely if you agree with all the following terms.<br>
 <h2>Website visit statistics</h2>
 <hr/>
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=400&t=tt&d=EsUkw_m2bHmFxftVUNklQ6CouRkNwbDnlRJFNuQiqBU&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_objBJSsyEdqmhf8JaUiLu");
+   })();
+</script>
+<script type="text/javascript" src="../js/main.js"></script>
 
 </body>
 

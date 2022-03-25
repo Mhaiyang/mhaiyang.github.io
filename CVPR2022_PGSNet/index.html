@@ -47,27 +47,27 @@ var _hmt = _hmt || [];
 <table align="center">
 <td align="center">
 <h1>Glass Segmentation using Intensity and Spectral Polarization Cues</h1>
-<!--<h3>-->
-<!--	<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<a href="https://dongshuhao.github.io/" target="_blank"><font size="3"><b>Bo Dong</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<font size="3"><b>Wen Dong</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<font size="3"><b>Jiaxi Yang</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<font size="3"><b>Seung-Hwan Baek</b></font><sup><font size="2">3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<a href="https://www.cs.princeton.edu/~fheide/" target="_blank"><font size="3"><b>Felix Heide</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<a href="http://www.cs.wm.edu/~ppeers/" target="_blank"><font size="3"><b>Pieter Peers</b></font></a><sup><font size="2">4</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<font size="3"><b>Xiaopeng Wei</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<a href="https://xinyangdut.github.io/" target="_blank"><font size="3"><b>Xin Yang</b></font></a><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<br>-->
-<!--</h3>-->
+<h3>
+	<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="https://dongshuhao.github.io/" target="_blank"><font size="3"><b>Bo Dong</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Wen Dong</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Jiaxi Yang</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Seung-Hwan Baek</b></font><sup><font size="2">3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="https://www.cs.princeton.edu/~fheide/" target="_blank"><font size="3"><b>Felix Heide</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://www.cs.wm.edu/~ppeers/" target="_blank"><font size="3"><b>Pieter Peers</b></font></a><sup><font size="2">4</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Xiaopeng Wei</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="https://xinyangdut.github.io/" target="_blank"><font size="3"><b>Xin Yang</b></font></a><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+</h3>
 
-<!--<sup><font size="2">1</font></sup>-->
-<!--<b><a><font size="3">Dalian University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--<sup><font size="2">2</font></sup>-->
-<!--<b><a><font size="3">Princeton University</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--<sup><font size="2">3</font></sup>-->
-<!--<b><a><font size="3">Pohang University of Science And Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--<sup><font size="2">4</font></sup>-->
-<!--<b><a><font size="3">College of William & Mary</font></a></b>-->
+<sup><font size="2">1</font></sup>
+<b><a><font size="3">Dalian University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">2</font></sup>
+<b><a><font size="3">Princeton University</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">3</font></sup>
+<b><a><font size="3">Pohang University of Science And Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">4</font></sup>
+<b><a><font size="3">College of William & Mary</font></a></b>
 
 <!--<br>-->
 <!--<br>&nbsp;-->
@@ -86,7 +86,7 @@ var _hmt = _hmt || [];
 <br><br>
 <table align="center">
 <tr>
-	<td align="center"><img border=0 height=300 width=900 src="coming_soon.png"></td>
+	<td align="center"><img border=0 height=120 width=1050 src="dataset_example.png"></td>
 </tr>
 </table>
 
@@ -98,10 +98,24 @@ var _hmt = _hmt || [];
 <!--</table>-->
 
 <br>
-<h2><p><font size="6"><b>Abstract</b></font></p></h2>
+<h2><p><font size="6"><b>RGB-P Glass Segmentation Dataset</b></font></p></h2>
 <hr/>
-<p><font size="4" face="Palatino Linotype">
-</font></p>
+
+<h4><p><font size="5" color="black"><b>1. Overview</b></font></p></h4>
+<font size="4" face="Palatino Linotype">We collected a large-scale polarization glass segmentation dataset, named <font color="red"><b>RGBP-Glass</b></font> using a trichromatic polarizer-array camera (LUCID PHX050S) that records four different linear-polarization directions (0, 45, 90, and 135 degree) for each color channel (i.e., R, G, and B). RGBP-Glass contains 4;511 RGB intensity and corresponding pixel-aligned trichromatic AoLP and DoLP images with manually annotated pixel-level accurate reference glass masks and associated bounding-boxes. Each image in RGBP-Glass contains at least one in-the-wild glass object. To ensure diversity of scenes, we capture the dataset from different locations, view angles, lighting conditions, types of glass, and shapes of glass.
+</font>
+
+<!--<br>-->
+<br>
+<h4><p><font size="5" color="black"><b>2. File Structure and Dataset Distribution</b></font></p></h4>
+<font size="3">
+</font>
+
+<table align="center">
+<tr>
+	<td align="center"><img border=0 height=660 width=800 src="dataset_file_structure.png"></td>
+</tr>
+</table>
 
 
 <!--<br>-->
@@ -124,19 +138,19 @@ var _hmt = _hmt || [];
 
 
 <br>
-<h2><p><font size="6"><b>Downloads</b></font></p></h2>
-<hr/>
+<h4><p><font size="5"><b>3. Downloads</b></font></p></h4>
+<!--<hr/>-->
 <div align="left">
 		<table>
-		<tr align="left">
-		<td>
-			<font size="4">Paper</font>
-		</td>
-		<td>
-<!--			<font size="4">: [ <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Mei_Depth-Aware_Mirror_Segmentation_CVPR_2021_paper.pdf" target="_blank">PDNet.pdf</a> ]</font>-->
-			<font size="4">: [ PGSNet.pdf ]</font>
-		</td>
-		</tr>
+<!--		<tr align="left">-->
+<!--		<td>-->
+<!--			<font size="4">Paper</font>-->
+<!--		</td>-->
+<!--		<td>-->
+<!--&lt;!&ndash;			<font size="4">: [ <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Mei_Depth-Aware_Mirror_Segmentation_CVPR_2021_paper.pdf" target="_blank">PDNet.pdf</a> ]</font>&ndash;&gt;-->
+<!--			<font size="4">: [ PGSNet.pdf ]</font>-->
+<!--		</td>-->
+<!--		</tr>-->
 
 		<!--<tr align="left">-->
 		<!--<td>-->
@@ -148,30 +162,30 @@ var _hmt = _hmt || [];
 		<!--</td>-->
 		<!--</tr>-->
 
-		<tr align="left">
-		<td>
-			<font size="4">Experimental results</font>
-		</td>
-		<td>
-<!--			<font size="4">: [ <a href="https://drive.google.com/file/d/1GP1_rm6FSRKVJ1AxV-DSquKjXtpNVF32/view?usp=sharing" target="_blank">Google Drive</a> ]</font>-->
-<!--			<font size="4">[ <a href="https://pan.baidu.com/s/1rFVaXeH3Ob1B5VfoeYLgZw" target="_blank">Baidu Disk</a>, fetch code: rrr3 ]</font>-->
-			<font size="4">: [ <a href="" target="_blank">Google Drive</a> ]</font>
-			<font size="4">[ <a href="" target="_blank">Microsoft OneDrive</a> ]</font>
-			<font size="4">[ <a href="" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>
-		</td>
+<!--		<tr align="left">-->
+<!--		<td>-->
+<!--			<font size="4">Experimental results</font>-->
+<!--		</td>-->
+<!--		<td>-->
+<!--&lt;!&ndash;			<font size="4">: [ <a href="https://drive.google.com/file/d/1GP1_rm6FSRKVJ1AxV-DSquKjXtpNVF32/view?usp=sharing" target="_blank">Google Drive</a> ]</font>&ndash;&gt;-->
+<!--&lt;!&ndash;			<font size="4">[ <a href="https://pan.baidu.com/s/1rFVaXeH3Ob1B5VfoeYLgZw" target="_blank">Baidu Disk</a>, fetch code: rrr3 ]</font>&ndash;&gt;-->
+<!--			<font size="4">: [ <a href="" target="_blank">Google Drive</a> ]</font>-->
+<!--			<font size="4">[ <a href="" target="_blank">Microsoft OneDrive</a> ]</font>-->
+<!--			<font size="4">[ <a href="" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>-->
+<!--		</td>-->
 
-		</tr>
+<!--		</tr>-->
 
-		<tr align="left">
-		<td>
-			<font size="4">Pre-trained model</font>
-		</td>
-		<td>
-			<font size="4">: [ <a href="" target="_blank">Google Drive</a> ]</font>
-			<font size="4">[ <a href="" target="_blank">Microsoft OneDrive</a> ]</font>
-			<font size="4">[ <a href="" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>
-		</td>
-		</tr>
+<!--		<tr align="left">-->
+<!--		<td>-->
+<!--			<font size="4">Pre-trained model</font>-->
+<!--		</td>-->
+<!--		<td>-->
+<!--			<font size="4">: [ <a href="" target="_blank">Google Drive</a> ]</font>-->
+<!--			<font size="4">[ <a href="" target="_blank">Microsoft OneDrive</a> ]</font>-->
+<!--			<font size="4">[ <a href="" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>-->
+<!--		</td>-->
+<!--		</tr>-->
 
 		<tr align="left">
 		<td>
@@ -202,7 +216,7 @@ var _hmt = _hmt || [];
 
 		<tr align="left">
 		<td>
-			<font size="4">Source code</font>
+			<font size="4">How to use</font>
 		</td>
 		<td>
 			<!--<font size="4">: [ Code ]</font>-->
@@ -212,8 +226,6 @@ var _hmt = _hmt || [];
 
 		</table>
 </div>
-<br>
-<br>
 
 
 <!--<h2><p><font size="6" color="black"><b>Dataset</b></font></p></h2>-->
@@ -267,9 +279,9 @@ var _hmt = _hmt || [];
 <!--</tr>-->
 <!--</table>-->
 
-
-<h2><p><font size="6" color="black"><b>BibTex</b></font></p></h2>
-<hr/>
+<br>
+<h4><p><font size="5" color="black"><b>4. BibTex</b></font></p></h4>
+<!--<hr/>-->
 <font size="3">
 @InProceedings{Mei_2022_CVPR_PGSNet,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;author = {Mei, Haiyang and Dong, Bo and Dong, Wen and Yang, Jiaxi and Baek, Seung-Hwan and Heide, Felix and Peers, Pieter and Wei, Xiaopeng and Yang, Xin},<br>
@@ -281,9 +293,11 @@ var _hmt = _hmt || [];
 </font>
 
 
-<br><br>
-<h2>Website visit statistics</h2>
-<hr/>
+<br>
+<h4><p><font size="5" color="black"><b>5. Website Visit Statistics</b></font></p></h4>
+<!--<br><br>-->
+<!--<h2>Website visit statistics</h2>-->
+<!--<hr/>-->
 <script type="text/javascript" src="//rf.revolvermaps.com/0/0/1.js?i=5ouwrv4o8mh&amp;s=258&amp;m=7&amp;v=true&amp;r=false&amp;b=000000&amp;n=false&amp;c=ff0000" async="async"></script>
 
 

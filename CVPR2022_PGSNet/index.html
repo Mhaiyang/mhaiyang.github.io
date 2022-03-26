@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
 	<a href="https://dongshuhao.github.io/" target="_blank"><font size="3"><b>Bo Dong</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3"><b>Wen Dong</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3"><b>Jiaxi Yang</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
-	<font size="3"><b>Seung-Hwan Baek</b></font><sup><font size="2">3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Seung-Hwan Baek</b></font><sup><font size="2">2,3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="https://www.cs.princeton.edu/~fheide/" target="_blank"><font size="3"><b>Felix Heide</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="http://www.cs.wm.edu/~ppeers/" target="_blank"><font size="3"><b>Pieter Peers</b></font></a><sup><font size="2">4</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
 	<font size="3"><b>Xiaopeng Wei</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -102,7 +102,7 @@ var _hmt = _hmt || [];
 <hr/>
 
 <h4><p><font size="5" color="black"><b>1. Overview</b></font></p></h4>
-<font size="4" face="Palatino Linotype">We collected a large-scale polarization glass segmentation dataset, named <font color="red"><b>RGBP-Glass</b></font> using a trichromatic polarizer-array camera (LUCID PHX050S) that records four different linear-polarization directions (0, 45, 90, and 135 degree) for each color channel (i.e., R, G, and B). RGBP-Glass contains 4511 RGB intensity and corresponding pixel-aligned trichromatic AoLP and DoLP images with manually annotated pixel-level accurate reference glass masks. Each image in RGBP-Glass contains at least one in-the-wild glass object. To ensure diversity of scenes, we capture the dataset from different locations, view angles, lighting conditions, types of glass, and shapes of glass.
+<font size="4" face="Palatino Linotype">We collected a large-scale polarization glass segmentation dataset, named <font color="red"><b>RGBP-Glass</b></font> using a LUCID PHX050S trichromatic polarizer-array camera that records four different linear-polarization directions (0, 45, 90, and 135 degree) for each color channel (i.e., R, G, and B). RGBP-Glass dataset contains 4511 RGB intensity and corresponding pixel-aligned trichromatic AoLP and DoLP images. All images come with manually annotated pixel-level accurate reference glass masks. Each image in RGBP-Glass contains at least one in-the-wild glass object. Our RGBP-Glass dataset offers rich diversities in scene and glass. Please refer to our paper for detailed statistics of the RGBP-Glass dataset.
 </font>
 
 <!--<br>-->
@@ -115,7 +115,7 @@ var _hmt = _hmt || [];
 </tr>
 </table>
 
-<font size="4" face="Palatino Linotype">We also provide the reflection and edge maps of the training set, which are required for training some glass segmentation methods (our PGSNet is out of this case).
+<font size="4" face="Palatino Linotype">As some glass segmentation methods require reflection and edge maps for training and testing, the RGBP-Glass dataset also provides the ground truth associated to these additional information.
 </font>
 
 
@@ -217,11 +217,11 @@ var _hmt = _hmt || [];
 
 		<tr align="left">
 		<td>
-			<font size="4">How to use</font>
+			<font size="4">Code</font>
 		</td>
 		<td>
 			<!--<font size="4">: [ Code ]</font>-->
-			<font size="4">: [ <a href="https://github.com/Mhaiyang/CVPR2022_PGSNet" target="_blank">Github</a> ] </font>
+			<font size="4">: [ <a href="https://github.com/Mhaiyang/CVPR2022_PGSNet" target="_blank">Github</a> ] (under-construction) </font>
 		</td>
 		</tr>
 

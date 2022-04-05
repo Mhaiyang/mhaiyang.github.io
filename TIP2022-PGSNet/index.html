@@ -47,38 +47,32 @@ var _hmt = _hmt || [];
 <table align="center">
 <td align="center">
 <h1>Progressive Glass Segmentation</h1>
-<!--<h3>-->
-<!--	<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<a href="https://dongshuhao.github.io/" target="_blank"><font size="3"><b>Bo Dong</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<font size="3"><b>Wen Dong</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<font size="3"><b>Jiaxi Yang</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<font size="3"><b>Seung-Hwan Baek</b></font><sup><font size="2">3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<a href="https://www.cs.princeton.edu/~fheide/" target="_blank"><font size="3"><b>Felix Heide</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<a href="http://www.cs.wm.edu/~ppeers/" target="_blank"><font size="3"><b>Pieter Peers</b></font></a><sup><font size="2">4</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<font size="3"><b>Xiaopeng Wei</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<a href="https://xinyangdut.github.io/" target="_blank"><font size="3"><b>Xin Yang</b></font></a><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--	<br>-->
-<!--</h3>-->
+<h3>
+	<font size="3"><b>Letian Yu</b></font><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Wen Dong</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Ziqi Wei</b></font><sup><font size="2">2,</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Li Zhu</b></font><sup><font size="2">1,&dagger;</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Yuxin Wang</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="https://xinyangdut.github.io/" target="_blank"><font size="3"><b>Xin Yang</b></font></a><sup><font size="2">1,&dagger;</font></sup>
+	<br>
+</h3>
 
-<!--<sup><font size="2">1</font></sup>-->
-<!--<b><a><font size="3">Dalian University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--<sup><font size="2">2</font></sup>-->
-<!--<b><a><font size="3">Princeton University</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--<sup><font size="2">3</font></sup>-->
-<!--<b><a><font size="3">Pohang University of Science And Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--<sup><font size="2">4</font></sup>-->
-<!--<b><a><font size="3">College of William & Mary</font></a></b>-->
+<sup><font size="2">1</font></sup>
+<b><a><font size="3">Dalian University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">2</font></sup>
+<b><a><font size="3">Tsinghua University</font></a></b>
 
-<!--<br>-->
-<!--<br>&nbsp;-->
-<!--&lt;!&ndash;<sup><font size="2">&dagger;</font></sup>&ndash;&gt;-->
-<!--<sup><font size="3">*</font></sup>-->
-<!--<a><font size="3"> Corresponding author</font></a>-->
+<br>
+<br>
+<sup><font size="2">*</font></sup>
+<a><font size="2">Joint first authors</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">&dagger;</font></sup>
+<a><font size="2"> Corresponding authors</font></a>
+
 <br>
 <br>&nbsp;
-
-	<b><a><font size="3"> Contact us:&nbsp;&nbsp;&nbsp;&nbsp;<i>xinyang@dlut.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;mhy666@mail.dlut.edu.cn</i></font></a></b>
-
+	<b><a><font size="3"> Contact us:&nbsp;&nbsp;&nbsp;&nbsp;<i>xinyang@dlut.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;mhy666@mail.dlut.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;letianyu@mail.dlut.edu.cn</i></font></a></b>
 </td>
 </table>
 
@@ -86,96 +80,25 @@ var _hmt = _hmt || [];
 <br><br>
 <table align="center">
 <tr>
-	<td align="center"><img border=0 height=300 width=900 src="coming_soon.png"></td>
+	<td align="center"><img border=0 height=250 width=1000 src="pipeline.png"></td>
 </tr>
 </table>
 
-<!--<br>-->
-<!--<table align="center">-->
-<!--<tr>-->
-	<!--<td align="center"><img border=0 height=350 width=800 src="Glass.gif"></td>-->
-<!--</tr>-->
-<!--</table>-->
 
 <br>
 <h2><p><font size="6"><b>Abstract</b></font></p></h2>
 <hr/>
-<p><font size="4" face="Palatino Linotype">
+<p><font size="4" face="Palatino Linotype">Glass is very common in the real world. Influenced by the uncertainty about the glass region and the varying complex scenes behind the glass, the existence of glass poses severe challenges to many computer vision tasks, making glass segmentation as an important computer vision task. Glass does not have its own visual appearances but only transmit/reflect the appearances of its surroundings, making it fundamentally different from other common objects. To address such a challenging task, existing methods typically explore and combine useful cues from different levels of features in the deep network. As there exists a characteristic gap between level-different features, i.e., deep layer features embed more high-level semantics and are better at locating the target objects while shallow layer features have larger spatial sizes and keep richer and more detailed low-level information, fusing these features naively thus would lead to a sub-optimal solution. In this paper, we approach the effective features fusion towards accurate glass segmentation in two steps. First, we attempt to bridge the characteristic gap between different levels of features by developing a Discriminability Enhancement (DE) module which enables level-specific features to be a more discriminative representation, alleviating the features incompatibility for fusion. Second, we design a Focus-and-Exploration Based Fusion (FEBF) module to richly excavate useful information in the fusion process by highlighting the common and exploring the difference between level-different features. Combining these two steps, we construct a Progressive Glass Segmentation Network (PGSNet) which uses multiple DE and FEBF modules to progressively aggregate features from high-level to low-level, implementing a coarse-to-fine glass segmentation. In addition, we build the first home-scene-oriented glass segmentation dataset for advancing household robot applications and in-depth research on this topic. Extensive experiments demonstrate that our method outperforms 26 cutting-edge models on three challenging datasets under four standard metrics.
 </font></p>
 
 
-<!--<br>-->
-<!--<h2><p><font size="6"><b>PDNet</b></font></p></h2>-->
-<!--<hr/>-->
-<!--<table align="center">-->
-<!--<tr>-->
-	<!--&lt;!&ndash;<td align="center"><img border=0 height=270 width=960 src="pipeline.png"></td>&ndash;&gt;-->
-<!--</tr>-->
-<!--</table>-->
-
-<!--<br>-->
-<!--<h2><p><font size="6"><b>Visual Results</b></font></p></h2>-->
-<!--<hr/>-->
-<!--<table align="center">-->
-<!--<tr>-->
-	<!--&lt;!&ndash;<td align="center"><img border=0 height=300 width=900 src="CVPR2020_Glass_1.gif"></td>&ndash;&gt;-->
-<!--</tr>-->
-<!--</table>-->
-
-
-<br>
-<h4><p><font size="5"><b>3. Downloads</b></font></p></h4>
-<!--<hr/>-->
+<h4><p><font size="6"><b>Downloads</b></font></p></h4>
 <div align="left">
 		<table>
-<!--		<tr align="left">-->
-<!--		<td>-->
-<!--			<font size="4">Paper</font>-->
-<!--		</td>-->
-<!--		<td>-->
-<!--&lt;!&ndash;			<font size="4">: [ <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Mei_Depth-Aware_Mirror_Segmentation_CVPR_2021_paper.pdf" target="_blank">PDNet.pdf</a> ]</font>&ndash;&gt;-->
-<!--			<font size="4">: [ PGSNet.pdf ]</font>-->
-<!--		</td>-->
-<!--		</tr>-->
-
-		<!--<tr align="left">-->
-		<!--<td>-->
-			<!--<font size="4">Glass Detection Dataset</font>-->
-		<!--</td>-->
-		<!--<td>-->
-		<!--<font size="4">: [ Google Drive ]</font>-->
-		<!--&lt;!&ndash;<font size="4">: <a href="" target="_blank">[ Google Drive ]</a></font>&ndash;&gt;-->
-		<!--</td>-->
-		<!--</tr>-->
-
-<!--		<tr align="left">-->
-<!--		<td>-->
-<!--			<font size="4">Experimental results</font>-->
-<!--		</td>-->
-<!--		<td>-->
-<!--&lt;!&ndash;			<font size="4">: [ <a href="https://drive.google.com/file/d/1GP1_rm6FSRKVJ1AxV-DSquKjXtpNVF32/view?usp=sharing" target="_blank">Google Drive</a> ]</font>&ndash;&gt;-->
-<!--&lt;!&ndash;			<font size="4">[ <a href="https://pan.baidu.com/s/1rFVaXeH3Ob1B5VfoeYLgZw" target="_blank">Baidu Disk</a>, fetch code: rrr3 ]</font>&ndash;&gt;-->
-<!--			<font size="4">: [ <a href="" target="_blank">Google Drive</a> ]</font>-->
-<!--			<font size="4">[ <a href="" target="_blank">Microsoft OneDrive</a> ]</font>-->
-<!--			<font size="4">[ <a href="" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>-->
-<!--		</td>-->
-
-<!--		</tr>-->
-
-<!--		<tr align="left">-->
-<!--		<td>-->
-<!--			<font size="4">Pre-trained model</font>-->
-<!--		</td>-->
-<!--		<td>-->
-<!--			<font size="4">: [ <a href="" target="_blank">Google Drive</a> ]</font>-->
-<!--			<font size="4">[ <a href="" target="_blank">Microsoft OneDrive</a> ]</font>-->
-<!--			<font size="4">[ <a href="" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>-->
-<!--		</td>-->
-<!--		</tr>-->
 
 		<tr align="left">
 		<td>
-			<font size="4">RGBP-Glass training set</font>
+			<font size="4">HSO training set</font>
 		</td>
 		<td>
 			<font size="4">: [ <a href="" target="_blank">Google Drive</a> ]</font>
@@ -187,7 +110,7 @@ var _hmt = _hmt || [];
 		</tr>
 		<tr align="left">
 		<td>
-			<font size="4">RGBP-Glass testing set</font>
+			<font size="4">HSO testing set</font>
 		</td>
 		<td>
 			<font size="4">: [ <a href="" target="_blank">Google Drive</a> ]</font>

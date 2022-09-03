@@ -81,7 +81,7 @@ var _hmt = _hmt || [];
 <br><br>
 <table align="center">
 <tr>
-	<td align="center"><img border=0 height=120 width=1050 src="dataset_example.png"></td>
+	<td align="center"><img border=0 height=340 width=1000 src="overview.jpg"></td>
 </tr>
 </table>
 
@@ -92,9 +92,9 @@ var _hmt = _hmt || [];
 <!--</tr>-->
 <!--</table>-->
 
-<br>
-<h2><p><font size="6"><b>Glass Segmentation</b></font></p></h2>
-<hr/>
+<!--<br>-->
+<!--<h2><p><font size="6"><b>Glass Segmentation</b></font></p></h2>-->
+<!--<hr/>-->
 
 <h4><p><font size="5" color="black"><b>1. Abstract</b></font></p></h4>
 <font size="4" face="Palatino Linotype">Glass is very common in our daily life. Existing computer vision systems neglect it and thus may have severe consequences, e.g., a robot may crash into a glass wall. However, sensing the presence of glass is not straightforward. The key challenge is that arbitrary objects/scenes can appear behind the glass. In this paper, we propose an important problem of detecting glass surfaces from a single RGB image. To address this problem, we construct the first large-scale glass detection dataset (GDD) and propose a novel glass detection network, called GDNet-B, which explores abundant contextual cues in a large field-of-view via a novel large-field contextual feature integration (LCFI) module and integrates both high-level and low-level boundary features with a boundary feature enhancement (BFE) module. Extensive experiments demonstrate that our GDNet-B achieves satisfying glass detection results on the images within and beyond the GDD testing set. We further validate the effectiveness and generalization capability of our proposed GDNet-B by applying it to other vision tasks, including mirror segmentation and salient object detection. Finally, we show the potential applications of glass detection and discuss possible future research directions.
@@ -102,16 +102,15 @@ var _hmt = _hmt || [];
 
 <!--<br>-->
 <br>
-<h4><p><font size="5" color="black"><b>2. File Structure and Dataset Distribution</b></font></p></h4>
+<h4><p><font size="5" color="black"><b>2. Boundary Feature Enhancement (BFE)</b></font></p></h4>
 
 <table align="center">
 <tr>
-	<td align="center"><img border=0 height=700 width=800 src="dataset_distribution.png"></td>
+	<td align="center"><img border=0 height=250 width=600 src="bfe.jpg"></td>
 </tr>
 </table>
 
-<font size="4" face="Palatino Linotype">As some glass segmentation methods require reflection and edge maps for training, the RGBP-Glass dataset also provides the ground truth associated to these additional information.
-</font>
+<font size="4" face="Palatino Linotype">Since the boundary is a strong cue for humans to distinguish a glass region, we further introduce the boundary cue to help boost the glass detection accuracy. Integrating boundary information can help glass detection in both segmentation and localization. In BFE, the input features are passed through four parallel branches, and the outputs of all branches are fused to generate glass boundary features, which are then used to predict the glass boundary map and complement the input features.</font>
 
 
 <!--<br>-->
@@ -185,7 +184,7 @@ var _hmt = _hmt || [];
 
 		<tr align="left">
 		<td>
-			<font size="4">RGBP-Glass training set</font>
+			<font size="4">Model</font>
 		</td>
 		<td>
 			<font size="4">: [ <a href="https://drive.google.com/file/d/1cfhfWwTEx-x0TyAmHzNrDgq42xMlC9WI/view?usp=sharing" target="_blank">Google Drive</a> ]</font>
@@ -198,7 +197,7 @@ var _hmt = _hmt || [];
 		</tr>
 		<tr align="left">
 		<td>
-			<font size="4">RGBP-Glass testing set</font>
+			<font size="4">Results</font>
 		</td>
 		<td>
 			<font size="4">: [ <a href="https://drive.google.com/file/d/1w00uUjqm2c_Atah3ZJKPHvX172YwDcy0/view?usp=sharing" target="_blank">Google Drive</a> ]</font>
@@ -216,7 +215,7 @@ var _hmt = _hmt || [];
 		</td>
 		<td>
 			<!--<font size="4">: [ Code ]</font>-->
-			<font size="4">: [ <a href="https://github.com/Mhaiyang/CVPR2022_PGSNet" target="_blank">Github</a> ] (under-construction) </font>
+			<font size="4">: [ <a href="https://github.com/Mhaiyang/TPAMI2022_GDNet-B" target="_blank">Github</a> ] </font>
 		</td>
 		</tr>
 
@@ -275,8 +274,21 @@ var _hmt = _hmt || [];
 <!--</tr>-->
 <!--</table>-->
 
+
 <br>
-<h4><p><font size="5" color="black"><b>4. BibTex</b></font></p></h4>
+<h4><p><font size="5" color="black"><b>4. Applications</b></font></p></h4>
+
+<table align="center">
+<tr>
+	<td align="center"><img border=0 height=400 width=550 src="application.jpg"></td>
+</tr>
+</table>
+
+<font size="4" face="Palatino Linotype">Automatic glass detection has various possible applications. Here, we envision two potential ones: obstacle avoidance for drones and intelligence photography/editing. If a drone is equipped with the ability to detect glass, it can easily find out where the glass is and avoid crashing into the glass (e.g., Figure (b)). In addition, if a phone camera is equipped with the ability to detect glass, it can identify the glass and then remove the reflections from the glass region to obtain the desired result (e.g., Figure (d)).</font>
+
+
+<br>
+<h4><p><font size="5" color="black"><b>5. BibTex</b></font></p></h4>
 <!--<hr/>-->
 <font size="3">
 @article{Haiyang:GDNet-B:2022,<br>
@@ -290,20 +302,12 @@ var _hmt = _hmt || [];
 
 
 <br>
-<h4><p><font size="5" color="black"><b>5. Website Visit Statistics</b></font></p></h4>
+<h4><p><font size="5" color="black"><b>6. Website Visit Statistics</b></font></p></h4>
 <!--<br><br>-->
 <!--<h2>Website visit statistics</h2>-->
 <!--<hr/>-->
 <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5pxzrkcgi6y&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
 
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_objBJSsyEdqmhf8JaUiLu");
-   })();
-</script>
-<script type="text/javascript" src="https://mhaiyang.github.io/CVPR2021_PDNet/main.js"></script>
 
 </body>
 

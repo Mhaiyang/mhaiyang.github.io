@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CVPR2022_PGSNet</title>
+
+<style media="screen" type="text/css">
+body
+{
+  border: 0pt none;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0pt;
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0pt;
+  padding: 0pt;
+  vertical-align: baseline;
+}
+body {
+  position: relative;
+  margin: 3em auto 2em auto;
+  width: 1080px;
+  font-family: Times New Roman, Lato, Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  background: #fdfdfd;
+}
+</style>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1ec4ad5c61857459aa78d5ee7ddee28d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+</head>
+
+<body>
+<h3 align="center"><i><font size="3" face="Palatino Linotype">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2022</font></i></h3>
+
+<table align="center">
+<td align="center">
+<h1>Glass Segmentation using Intensity and Spectral Polarization Cues</h1>
+<h3>
+	<a href="http://mhaiyang.github.io" target="_blank"><font size="3"><b>Haiyang Mei</b></font></a><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="https://dongshuhao.github.io/" target="_blank"><font size="3"><b>Bo Dong</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Wen Dong</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Jiaxi Yang</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Seung-Hwan Baek</b></font><sup><font size="2">2,3</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="https://www.cs.princeton.edu/~fheide/" target="_blank"><font size="3"><b>Felix Heide</b></font></a><sup><font size="2">2</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://www.cs.wm.edu/~ppeers/" target="_blank"><font size="3"><b>Pieter Peers</b></font></a><sup><font size="2">4</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font size="3"><b>Xiaopeng Wei</b></font><sup><font size="2">1</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="https://xinyangdut.github.io/" target="_blank"><font size="3"><b>Xin Yang</b></font></a><sup><font size="2">1,*</font></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+</h3>
+
+<sup><font size="2">1</font></sup>
+<b><a><font size="3">Dalian University of Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">2</font></sup>
+<b><a><font size="3">Princeton University</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">3</font></sup>
+<b><a><font size="3">Pohang University of Science And Technology</font></a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup><font size="2">4</font></sup>
+<b><a><font size="3">College of William & Mary</font></a></b>
+
+<!--<br>-->
+<!--<br>&nbsp;-->
+<!--&lt;!&ndash;<sup><font size="2">&dagger;</font></sup>&ndash;&gt;-->
+<!--<sup><font size="3">*</font></sup>-->
+<!--<a><font size="3"> Corresponding author</font></a>-->
+<br>
+<br>&nbsp;
+
+	<b><a><font size="3"> Contact us:&nbsp;&nbsp;&nbsp;&nbsp;<i>xinyang@dlut.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;mhy666@mail.dlut.edu.cn</i></font></a></b>
+
+</td>
+</table>
+
+<br><br>
+<table align="center">
+<tr>
+	<td align="center"><embed height="540" width="960" src="04990-video.mp4"></td>
+</tr>
+</table>
+
+<!--<br>-->
+<!--<table align="center">-->
+<!--<tr>-->
+	<!--<td align="center"><img border=0 height=350 width=800 src="Glass.gif"></td>-->
+<!--</tr>-->
+<!--</table>-->
+
+<br>
+<h2><p><font size="6"><b>RGB-P Glass Segmentation Dataset</b></font></p></h2>
+<hr/>
+
+<h4><p><font size="5" color="black"><b>1. Overview</b></font></p></h4>
+<font size="4" face="Palatino Linotype">We collected a large-scale polarization glass segmentation dataset, named <font color="red"><b>RGBP-Glass</b></font> using a LUCID PHX050S trichromatic polarizer-array camera that records four different linear-polarization directions (0, 45, 90, and 135 degree) for each color channel (i.e., R, G, and B). RGBP-Glass dataset contains 4511 RGB intensity and corresponding pixel-aligned trichromatic AoLP and DoLP images. All images come with manually annotated pixel-level accurate reference glass masks. Each image in RGBP-Glass contains at least one in-the-wild glass object. Our RGBP-Glass dataset offers rich diversities in scene and glass. Please refer to our paper for detailed statistics of the RGBP-Glass dataset.
+</font>
+
+<br><br>
+<table align="center">
+<tr>
+	<td align="center"><img border=0 height=120 width=1050 src="dataset_example.png"></td>
+</tr>
+</table>
+
+<!--<br>-->
+<br>
+<h4><p><font size="5" color="black"><b>2. File Structure and Dataset Distribution</b></font></p></h4>
+
+<table align="center">
+<tr>
+	<td align="center"><img border=0 height=700 width=800 src="dataset_distribution.png"></td>
+</tr>
+</table>
+
+<font size="4" face="Palatino Linotype">As some glass segmentation methods require reflection and edge maps for training, the RGBP-Glass dataset also provides the ground truth associated to these additional information.
+</font>
+
+
+<!--<br>-->
+<!--<h2><p><font size="6"><b>PDNet</b></font></p></h2>-->
+<!--<hr/>-->
+<!--<table align="center">-->
+<!--<tr>-->
+	<!--&lt;!&ndash;<td align="center"><img border=0 height=270 width=960 src="pipeline.png"></td>&ndash;&gt;-->
+<!--</tr>-->
+<!--</table>-->
+
+<!--<br>-->
+<!--<h2><p><font size="6"><b>Visual Results</b></font></p></h2>-->
+<!--<hr/>-->
+<!--<table align="center">-->
+<!--<tr>-->
+	<!--&lt;!&ndash;<td align="center"><img border=0 height=300 width=900 src="CVPR2020_Glass_1.gif"></td>&ndash;&gt;-->
+<!--</tr>-->
+<!--</table>-->
+
+
+<br>
+<h4><p><font size="5"><b>3. Downloads</b></font></p></h4>
+<!--<hr/>-->
+<div align="left">
+		<table>
+		<tr align="left">
+		<td>
+			<font size="4">Paper</font>
+		</td>
+		<td>
+			<font size="4">: [ <a href="https://openaccess.thecvf.com/content/CVPR2022/html/Mei_Glass_Segmentation_Using_Intensity_and_Spectral_Polarization_Cues_CVPR_2022_paper.html" target="_blank">PGSNet.pdf</a> ]</font>
+<!--			<font size="4">: [ PGSNet.pdf ]</font>-->
+		</td>
+		</tr>
+
+		<!--<tr align="left">-->
+		<!--<td>-->
+			<!--<font size="4">Glass Detection Dataset</font>-->
+		<!--</td>-->
+		<!--<td>-->
+		<!--<font size="4">: [ Google Drive ]</font>-->
+		<!--&lt;!&ndash;<font size="4">: <a href="" target="_blank">[ Google Drive ]</a></font>&ndash;&gt;-->
+		<!--</td>-->
+		<!--</tr>-->
+
+		<tr align="left">
+		<td>
+			<font size="4">Experimental results</font>
+		</td>
+		<td>
+<!--			<font size="4">: [ <a href="https://drive.google.com/file/d/1GP1_rm6FSRKVJ1AxV-DSquKjXtpNVF32/view?usp=sharing" target="_blank">Google Drive</a> ]</font>-->
+<!--			<font size="4">[ <a href="https://pan.baidu.com/s/1rFVaXeH3Ob1B5VfoeYLgZw" target="_blank">Baidu Disk</a>, fetch code: rrr3 ]</font>-->
+			<font size="4">: [ <a href="https://drive.google.com/drive/folders/1pkOCWFTvl63QSaMkNmjrGYmucmKfv7HO?usp=sharing" target="_blank">Google Drive</a> ]</font>
+<!--			<font size="4">[ <a href="" target="_blank">Microsoft OneDrive</a> ]</font>-->
+			<font size="4">[ <a href="" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>
+		</td>
+
+		</tr>
+
+		<tr align="left">
+		<td>
+			<font size="4">Pre-trained model</font>
+		</td>
+		<td>
+			<font size="4">: [ <a href="https://drive.google.com/file/d/1_biqZ_zUWFo8QJ3Pty6ZHxfk5PqKwIXK/view?usp=sharing" target="_blank">Google Drive</a> ]</font>
+<!--			<font size="4">[ <a href="" target="_blank">Microsoft OneDrive</a> ]</font>-->
+			<font size="4">[ <a href="" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>
+		</td>
+		</tr>
+
+		<tr align="left">
+		<td>
+			<font size="4">RGBP-Glass training set</font>
+		</td>
+		<td>
+			<font size="4">: [ <a href="https://drive.google.com/file/d/1L7M3DlSeIeFr7eqDFfp5X_9UH6Qr-tPB/view?usp=sharing" target="_blank">Google Drive</a> ]</font>
+			<font size="4">[ <a href="https://pan.baidu.com/s/1OlBf27cSglvYZCSM2Jv00w" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>
+		</td>
+		</tr>
+		<tr align="left">
+		<td>
+			<font size="4">RGBP-Glass testing set</font>
+		</td>
+		<td>
+			<font size="4">: [ <a href="https://drive.google.com/file/d/1RyIAPN9xZLe6GPeDmPrU2RJ9fbBroga8/view?usp=sharing" target="_blank">Google Drive</a> ]</font>
+			<font size="4">[ <a href="https://pan.baidu.com/s/1OlBf27cSglvYZCSM2Jv00w" target="_blank">Baidu Disk</a>, fetch code: rgbp ]</font>
+		</td>
+		</tr>
+
+		<tr align="left">
+		<td>
+			<font size="4">Code</font>
+		</td>
+		<td>
+			<font size="4">: [ <a href="https://github.com/Mhaiyang/CVPR2022_PGSNet" target="_blank">Github</a> ] </font>
+		</td>
+		</tr>
+
+		</table>
+</div>
+
+
+<!--<h2><p><font size="6" color="black"><b>Dataset</b></font></p></h2>-->
+<!--<hr/>-->
+
+<!--<font size="4"> Both <font size="4" color="red">training set</font> and <font size="4" color="red">testing set</font> can be obtained via form request! </font>-->
+<!--<br><br>-->
+
+<!--<font size="3">-->
+<!--	To request access to the dataset for non-commercial use, please review the terms and conditions. If you agree with them, please fill the form below and then click the "<font color="black">Send Request</font>" button to achieve a request. Please fill in your official university/company email address. Thank you!-->
+
+<!--	<br>-->
+<!--	<br>-->
+
+<!--	<b>Terms and Conditions</b>-->
+<!--	<br>-->
+
+<!--The dataset can be used freely if you agree with all the following terms.<br>-->
+
+<!-- - The dataset is used only for non-commercial purposes, such as teaching and research. You do not use the dataset or any of its modified versions for any purposes of commercial advantage or private financial gain.<br>-->
+<!-- - You do not distribute the dataset or any of its modified versions to other individuals, institutes, companies, associations or public.<br>-->
+<!-- - In case you use the dataset within your research papers, you refer to our publications on our website. If the dataset is used in media, a link to our website is included.<br>-->
+<!-- - We reserve all rights that are not explicitly granted to you. The dataset is provided as is, and you take full responsibility for any risk of using it. There may be inaccuracies although we tried, and will try our best to rectify any inaccuracy once found.-->
+
+<!--</font>-->
+<!--<br>-->
+
+<!--<h3>Sending Request to Prof. Xin Yang (xinyang@dlut.edu.cn):</h3>-->
+
+<!--<form class="form" id="emailForm">-->
+<!--	Name:<br>-->
+<!--    <input id="first" name='name' type="text" placeholder="Your name..." class="form__input" />-->
+<!--	<br><br>-->
+<!--	Institute:<br>-->
+<!--    <input id="second" name='institute' type="text" placeholder="Your institute..." class="form__input" />-->
+<!--	<br><br>-->
+<!--	E-mail:<br>-->
+<!--	<input id="third" name='email' type="text" placeholder="Your E-mail address..." class="form__input" />-->
+<!--    &lt;!&ndash;<textarea id="third" name='e-mail' type="text" placeholder="Your E-mail..." class="form__input"></textarea>&ndash;&gt;-->
+<!--</form>-->
+<!--<br>-->
+<!--<button id="btnSubmit">Send Request</button>-->
+<!--<br><br><br><br>-->
+
+<!--<br><br><br><br>-->
+<!--<h2><p><font size="6" color="black"><b>Report</b></font></p></h2>-->
+<!--<hr/>-->
+<!--<table align="center">-->
+<!--<tr>-->
+	<!--<td align="center"><embed src="report.mp4" width="800" height="450"></td>-->
+<!--</tr>-->
+<!--</table>-->
+
+<br>
+<h4><p><font size="5" color="black"><b>4. BibTex</b></font></p></h4>
+<!--<hr/>-->
+<font size="3">
+@InProceedings{Haiyang:PGSNet:2022,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;author = {Mei, Haiyang and Dong, Bo and Dong, Wen and Yang, Jiaxi and Baek, Seung-Hwan and Heide, Felix and Peers, Pieter and Wei, Xiaopeng and Yang, Xin},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title = {Glass Segmentation using Intensity and Spectral Polarization Cues},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;month = {June},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;year = {2022}<br>
+}
+</font>
+
+
+<br>
+<h4><p><font size="5" color="black"><b>5. Website Visit Statistics</b></font></p></h4>
+<!--<br><br>-->
+<!--<h2>Website visit statistics</h2>-->
+<!--<hr/>-->
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/1.js?i=5ouwrv4o8mh&amp;s=258&amp;m=7&amp;v=true&amp;r=false&amp;b=000000&amp;n=false&amp;c=ff0000" async="async"></script>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_objBJSsyEdqmhf8JaUiLu");
+   })();
+</script>
+<script type="text/javascript" src="https://mhaiyang.github.io/CVPR2021_PDNet/main.js"></script>
+
+</body>
+
+</html>
